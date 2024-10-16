@@ -1,0 +1,22 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type VehicleSchema {
+  typeId: Float!
+  typeName: String!
+}
+
+type Make {
+  makeId: Float!
+  makeName: String!
+  vehicleTypes: [VehicleSchema!]!
+}
+
+type Query {
+  vehicles: [Make!]!
+}
+
+type Mutation {
+  createVehicles: Boolean!
+}
