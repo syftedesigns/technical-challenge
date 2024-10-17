@@ -2,9 +2,17 @@
 
 1. I noticed that the endpoint GetAllMakes?format=XML returns 11562 records this means we need to perform 11562 queries to get the vehicleType and transform the JSON.
 I wasn't sure if that was intented, so I had two options: expose a mutation accepting the makeId, or just try to process the entire payload, I took the second option.
-Basically I split 11562 records into batches moving into them using a cursor and I'm processing them using delay because I had an IP blocking issue after making requests.requests.
+Basically I split 11562 records into batches moving into them using a cursor and I'm processing them using delay because I had an IP blocking issue after making many request to the API.
 
 2. I wasn't sure what trigger mechanism was expected to start the api calls (XML to JSON transformation), so I created a mutation as the main trigger event, this was not specified in the Challenge details, it only specifies the transfomation process. 
+
+
+Run the project using Docker
+```bash
+$ yarn docker:mount
+```
+
+
 
 ## Nest Generated
 <p align="center">
