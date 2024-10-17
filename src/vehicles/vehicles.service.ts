@@ -12,10 +12,8 @@ export class VehiclesService {
   ) {}
 
   async create(): Promise<boolean> {
-    const vehicles = await this.xmlParser.getAllVehiclesByType(20);
+    await this.xmlParser.getAllVehiclesByType(50);
     console.log("process finished");
-    await this.makeVehicleModel.insertMany(vehicles.flat());
-    // Requiriment: Expose the get values only in the Query.
     return true;
   }
 

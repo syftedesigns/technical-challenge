@@ -5,7 +5,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - MONGO_DATABASE_URL=mongodb://mongo:27017/vpic
+      - MONGO_DATABASE_URL=mongodb+srv://carlos:xcVb6Q9izLCTFExk@cluster0.fxnxa.mongodb.net/vpic?retryWrites=true&w=majority&appName=Cluster0
       - VPIC_API_URL=https://vpic.nhtsa.dot.gov/api/vehicles
     depends_on:
       - mongo
